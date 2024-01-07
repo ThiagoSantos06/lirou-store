@@ -1,12 +1,13 @@
 header {
     display: flex;
     justify-content: center;
-    background-color: #4d3c3c;
-    height: 13rem;
+    align-items: center;
+    background-color: #282828;
+    height: 7rem;
 }
 
 img {
-    width: 14rem;
-    height: 11.5rem;
+    width: 5rem;
+    height: 5rem;
     object-fit: cover;
 }
