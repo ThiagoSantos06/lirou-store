@@ -1,15 +1,14 @@
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #282828;
     height: 7rem;
-    border-bottom-right-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
 }
 
 img {
-    width: 5rem;
-    height: 5rem;
+    width: 6.5rem;
+    height: 6.5rem;
     object-fit: cover;
 }
+
