@@ -6,6 +6,7 @@ input {
     border: none;
     outline: none;
     color: #232323ea;
+    
 }
 
 input::placeholder {
@@ -15,10 +16,38 @@ input::placeholder {
 #input-container, .input-container {
     display: block;
     margin: 0 auto;
-  }
+    margin-top: 2rem;
+}
   
   @media only screen and (min-width: 900px) {
     #input-container, .input-container {
       float: right;
     }
-  }
+}
+
+input {
+    width: 20rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #D8D8D8;
+    border: none;
+    outline: none;
+    color: #232323ea;
+    
+}
+
+input::placeholder {
+    color: #23232398
+}
+
+#input-container, .input-container {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+  
+  @media only screen and (min-width: 900px) {
+    #input-container, .input-container {
+      float: right;
+    }
+}
