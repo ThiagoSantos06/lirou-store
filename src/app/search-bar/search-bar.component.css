@@ -1,0 +1,16 @@
+input {
+    width: 30rem;
+    padding: 0.5rem;
+    margin-top: 5rem;
+    margin-left: 57rem;
+    display: flex;
+    border-radius: 1rem;
+    background-color: #D8D8D8;
+    border: none;
+    outline: none;
+    color: #232323ea;
+}
+
+input::placeholder {
+    color: #23232398
+}
