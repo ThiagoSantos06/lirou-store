@@ -12,15 +12,13 @@ input::placeholder {
     color: #23232398
 }
 
-.input-container {
-    position: absolute;
-    right: 0;
-   }
-   
-   @media only screen and (max-width: 600px) {
-    .input-container {
-      display: block;
-      margin: 0 auto;
-      width: 50%;
+#input-container, .input-container {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (min-width: 800px) {
+    #input-container, .input-container {
+      float: right;
     }
-}
+  }
