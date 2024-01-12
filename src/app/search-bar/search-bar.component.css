@@ -1,5 +1,5 @@
 input {
-    width: 30rem;
+    width: 20rem;
     padding: 0.5rem;
     border-radius: 1rem;
     background-color: #D8D8D8;
@@ -17,7 +17,7 @@ input::placeholder {
     margin: 0 auto;
   }
   
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 900px) {
     #input-container, .input-container {
       float: right;
     }
