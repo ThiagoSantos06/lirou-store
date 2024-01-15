@@ -1,7 +1,8 @@
 .input-container {
-    display: block;
-    margin: 0 auto;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+
+    margin: 2rem auto 0;
     width: 20rem;
     padding: 0.5rem;
     border-radius: 1rem;
@@ -13,16 +14,19 @@ input {
   border: none;
   outline: none;
   color: #232323ea;
-  width: 30rem;
+
+  width: inherit;
   padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
 }
 
 input::placeholder {
   color: #23232398;
-  
+
 }
-  
-  @media only screen and (min-width: 431px) {
+
+@media only screen and (min-width: 431px) {
     .input-container {
       width: 15rem;
     }
@@ -41,7 +45,9 @@ input::placeholder {
 }
 
 img {
-  width: 5rem;
-  height: 5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+
   object-fit: cover;
+  transform: scale(1.5);
 }
