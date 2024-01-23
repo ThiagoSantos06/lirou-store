@@ -1,12 +1,31 @@
 .input-container {
-    display: block;
-    margin: 0 auto;
-    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto 0;
     width: 20rem;
     padding: 0.5rem;
-
     border-radius: 1rem;
     background-color: #D8D8D8;
+}
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #232323ea;
+
+  width: inherit;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #23232398;
+
+}
+
+@media only screen and (min-width: 431px) {
     border: none;
     outline: none;
     color: #232323ea;
@@ -16,10 +35,10 @@ input::placeholder {
   color: #23232398
 }
   
-  @media only screen and (min-width: 431px) {
+@media only screen and (min-width: 431px) {
     .input-container {
-      width: 15rem;
-    }
+    width: 15rem;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -28,10 +47,16 @@ input::placeholder {
     margin-right: 2%;
     width: 40rem;
   }
+
+  input {
+    width: 35rem;
+  }
 }
 
 img {
-  width: 5rem;
-  height: 5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+
   object-fit: cover;
+  transform: scale(1.5);
 }
