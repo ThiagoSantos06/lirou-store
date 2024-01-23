@@ -1,0 +1,41 @@
+h3 {
+    font-family: 'Inter', sans-serif;
+}
+
+.imagens {
+    height: 5rem;
+    width: 5rem;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        /* PC */
+        margin-left: 2.3rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .container {
+        /* celular */
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    h3 {
+      /* PC */
+      margin-top: 10rem;
+      margin-left: 35%;
+      transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 599px) {
+    h3 {
+        /* celular */
+        margin-top: 5rem;
+        margin-left: 1.5rem;
+    }
+}
