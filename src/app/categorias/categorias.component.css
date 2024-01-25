@@ -30,7 +30,7 @@ section {
 }
 
 @media screen and (min-width: 600px) {
-    .container {
+    .container-categorias {
         /* PC */
         margin-left: 2.3rem;
         margin-top: 0.5rem;
@@ -38,14 +38,12 @@ section {
 }
 
 @media screen and (max-width: 599px) {
-    .container {
+    .container-categorias {
         /* celular */
         margin-left: 1.5rem;
         margin-top: 0.5rem;
     }
 }
-
-
 
 @media screen and (min-width: 600px) {
     h3 {

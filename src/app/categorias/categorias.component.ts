@@ -107,10 +107,16 @@ export class CategoriasComponent {
   ]
 
   ngOnInit() {
-    document.addEventListener('wheel', function(event) {
-      const delta = Math.sign(event.deltaY);
-      document.querySelector('.container')!.scrollLeft += delta * 50; // ajuste o valor 50 conforme necessário
-     }, false);
+    const container = document.querySelector('.container-categorias');
+  
+    if (container) {
+      container.addEventListener('wheel', function(event) {
+        event.preventDefault();
+  
+        const wheelEvent = event as WheelEvent;
+        const delta = Math.sign(wheelEvent.deltaY);
+        container.scrollLeft += delta * 30;
+      }, { passive: false });
+    }
   }
 }
-
