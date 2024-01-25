@@ -1,6 +1,9 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/inter@3.15.0/dist/inter.css">
 <h3>Categorias</h3>
 
-<div class="container">
-    <img *ngFor="let item of comprinhas" src={{item}} class="imagens">
-</div>
+<section class="container">
+    <div *ngFor="let item of todosOsOculos">
+        <img src="{{item.foto}}" alt="">
+        <h5>{{item.nome}}</h5>
+    </div>
+</section>
