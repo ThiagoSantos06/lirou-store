@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlassesService } from 'src/app/client/services/GlassesService';
 
 @Component({
   selector: 'app-destaques',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./destaques.component.css']
 })
 export class DestaquesComponent {
+  listaDeOculos = []
+  constructor(private glassesService: GlassesService) {
+    
+  } 
+  
   fotoDosOculos = [
     "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
     "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
@@ -118,5 +124,10 @@ export class DestaquesComponent {
         container.scrollLeft += delta * 30;
       }, { passive: false });
     }
+
+    this.glassesService.getGlasses().subscribe((listaDeOculos: any) => {
+      this.listaDeOculos = listaDeOculos
+      console.log(listaDeOculos)
+    })
   }
 }
