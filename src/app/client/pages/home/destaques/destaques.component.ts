@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { GlassesService } from 'src/app/client/services/GlassesServices';
 
 @Component({
   selector: 'app-destaques',
   templateUrl: './destaques.component.html',
   styleUrls: ['./destaques.component.css']
 })
+
 export class DestaquesComponent {
+  listaDeOculos = []
+
+  constructor(private glassesService: GlassesService)  {
+
+  }
+
   fotoDosOculos = [
     "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
     "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
@@ -108,15 +116,22 @@ export class DestaquesComponent {
 
   ngOnInit() {
     const container = document.querySelector('.container-destaques');
-  
+
     if (container) {
       container.addEventListener('wheel', function(event) {
         event.preventDefault();
-  
+
         const wheelEvent = event as WheelEvent;
         const delta = Math.sign(wheelEvent.deltaY);
         container.scrollLeft += delta * 30;
       }, { passive: false });
     }
+
+    this.glassesService.getGlasses().subscribe((listaDeOculos: any) => {
+      this.listaDeOculos = listaDeOculos
+      console.log(listaDeOculos)
+    })
+
+
   }
 }
