@@ -1,0 +1,62 @@
+h3, h4 {
+    font-family: 'Inter', sans-serif;
+}
+
+.juliet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 2px black;
+    border-radius: 0.8rem;
+    width: 95%;
+    height: 3rem;
+}
+
+section {
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+}
+
+h5 {
+    font-family: 'Inter', sans-serif;
+    margin-top: 0.5rem;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+    h3 {
+      /* PC */
+      margin-top: 3rem;
+      margin-left: 35%;
+      transform: translateX(-50%);
+    }
+
+    .juliet {
+        margin-top: 1rem;
+        margin-left: 2.2rem;
+    }
+
+    .container-produtos {
+        margin-top: 1rem;
+        margin-left: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    h3 {
+        /* celular */
+        margin-top: 3rem;
+        margin-left: 1.5rem;
+    }
+}

@@ -1,0 +1,62 @@
+h3 {
+    font-family: 'Inter', sans-serif;
+}
+
+h5 {
+    font-family: 'Inter', sans-serif;
+    margin-top: 0.5rem;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+img {
+    height: 8rem;
+    width: 8rem;
+}
+
+section {
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media screen and (min-width: 600px) {
+    .container-destaques {
+        /* PC */
+        margin-left: 2.3rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .container-destaques {
+        /* celular */
+        margin-left: 1.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    h3 {
+      /* PC */
+      margin-top: 3rem;
+      margin-left: 35%;
+      transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 599px) {
+    h3 {
+        /* celular */
+        margin-top: 3rem;
+        margin-left: 1.5rem;
+    }
+}
