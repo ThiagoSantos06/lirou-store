@@ -33,5 +33,15 @@ export class ProdutosComponent {
       nome: "FLAK 10",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
+
+    {
+      nome: "FLAK 10",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
+
+    {
+      nome: "FLAK 10",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
   ]
 }
