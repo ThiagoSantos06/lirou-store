@@ -60,54 +60,5 @@ export class DestaquesComponent {
       nome: "24K",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
-
-    {
-      nome: "CORVETTE",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "FLACK 1.0",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "FLACK 2.0",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "DART",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "WIRE",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "DESCANSO COM MOLINHAS",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
   ]
-
-  ngOnInit() {
-    const container = document.querySelector('.container-destaques');
-  
-    if (container) {
-      container.addEventListener('wheel', function(event) {
-        event.preventDefault();
-  
-        const wheelEvent = event as WheelEvent;
-        const delta = Math.sign(wheelEvent.deltaY);
-        container.scrollLeft += delta * 30;
-      }, { passive: false });
-    }
-
-    this.glassesService.getGlasses().subscribe((listaDeOculos: any) => {
-      this.listaDeOculos = listaDeOculos
-      console.log(listaDeOculos)
-    })
-  }
 }

@@ -2,6 +2,10 @@ h3, h4, h5 {
     font-family: 'Inter', sans-serif;
 }
 
+h3 {
+    font-size: 2rem;
+}
+
 h4 {
     margin-top: 0.5rem;
 }
@@ -20,6 +24,19 @@ button {
     margin-top: 0.5rem;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgb(51, 51, 51);
+}
+
+img {
+    border: solid 3px black;
+    border-radius: 0.5rem;
+    width: 12rem;
+    height: 12rem;
+    margin-top: 1rem;
 }
 
 .juliet {
@@ -46,7 +63,7 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 2.8rem;
+    margin-right: 2rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -62,7 +79,7 @@ div {
         margin-left: 2.2rem;
     }
 
-    .container-produtos {
+    .container-produtos, .container-produtos2 {
         margin-top: 1rem;
         margin-left: 2.2rem;
     }
@@ -72,6 +89,17 @@ div {
     h3 {
         /* celular */
         margin-top: 3rem;
+        margin-left: 1.5rem;
+    }
+
+    .juliet {
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        width: 90%;
+    }
+
+    .container-produtos, .container-produtos2 {
+        margin-top: 1rem;
         margin-left: 1.5rem;
     }
 }

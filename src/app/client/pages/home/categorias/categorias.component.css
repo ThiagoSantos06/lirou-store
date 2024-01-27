@@ -1,10 +1,12 @@
 h3 {
     font-family: 'Inter', sans-serif;
+    font-size: 2rem;
 }
 
 h5 {
     font-family: 'Inter', sans-serif;
     margin-top: 0.5rem;
+    font-size: 1rem;
 }
 
 div {
@@ -18,8 +20,9 @@ div {
 img {
     border-radius: 100%;
     margin-top: 1rem;
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
+    border: solid 3px black;
 }
 
 section {
