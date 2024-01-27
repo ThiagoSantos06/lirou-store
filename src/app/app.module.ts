@@ -8,6 +8,7 @@ import { DestaquesComponent } from './client/pages/home/destaques/destaques.comp
 import { ProdutosComponent } from './client/pages/home/produtos/produtos.component';
 import { HomeComponent } from './client/pages/home/home.component';
 import { CartComponent } from './client/pages/cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CartComponent } from './client/pages/cart/cart.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
