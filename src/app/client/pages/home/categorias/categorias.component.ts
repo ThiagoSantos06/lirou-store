@@ -6,24 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent {
-  fotoDosOculos = [
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-  ]
-
   todosOsOculos = [
     {
       nome: "JULIET",
@@ -47,7 +29,7 @@ export class CategoriasComponent {
 
     {
       nome: "DOUBLE X",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+      foto: "https://eomajdtriisxygrrtrlx.supabase.co/storage/v1/object/public/imagens/Double%20X.jpg"
     },
 
     {
@@ -62,7 +44,7 @@ export class CategoriasComponent {
 
     {
       nome: "FLACK 1.0",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+      foto: "https://eomajdtriisxygrrtrlx.supabase.co/storage/v1/object/public/imagens/Flack%201.0.jpg"
     },
 
     {
@@ -72,12 +54,12 @@ export class CategoriasComponent {
 
     {
       nome: "DART",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+      foto: "https://eomajdtriisxygrrtrlx.supabase.co/storage/v1/object/public/imagens/Dart.jpg"
     },
 
     {
       nome: "WIRE",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+      foto: "https://eomajdtriisxygrrtrlx.supabase.co/storage/v1/object/public/imagens/Wire.jpg"
     },
 
     {

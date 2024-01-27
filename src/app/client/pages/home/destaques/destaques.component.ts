@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GlassesService } from 'src/app/client/services/GlassesService';
+import { BodyGlassesDTO, GlassesDTO } from 'src/app/shared/models/GlassesDTO';
 import { imagens, todosOsOculos } from 'src/assets/sample';
 
 @Component({
@@ -8,34 +9,19 @@ import { imagens, todosOsOculos } from 'src/assets/sample';
   styleUrls: ['./destaques.component.css']
 })
 export class DestaquesComponent {
-  listaDeOculosDaAPI = []
+  listaDeOculosDaAPI: GlassesDTO[] = []
   fotosDeExemplo = imagens
   listaDeOculosDeExemplo = todosOsOculos
 
   constructor(private glassesService: GlassesService) {}
-
-  usarRolagemHorizontalNosConteinteres(){
-    const container = document.querySelector('.container-destaques');
-
-    if (container) {
-      container.addEventListener('wheel', function(event) {
-        event.preventDefault();
-
-        const wheelEvent = event as WheelEvent;
-        const delta = Math.sign(wheelEvent.deltaY);
-        container.scrollLeft += delta * 30;
-      }, { passive: false });
-    }
-  }
   
   buscarOculosDaAPI(){
-    this.glassesService.getGlasses().subscribe((listaDeOculos: any) => {
-      this.listaDeOculosDaAPI = listaDeOculos
+    this.glassesService.getGlasses().subscribe((listaDeOculos: BodyGlassesDTO) => {
+      this.listaDeOculosDaAPI = listaDeOculos.content
     })
   }
 
   ngOnInit() {
-    this.usarRolagemHorizontalNosConteinteres()
     this.buscarOculosDaAPI()
   }
 }
