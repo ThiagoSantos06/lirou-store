@@ -41,6 +41,10 @@ section {
         margin-left: 2.3rem;
         margin-top: 1rem;
     }
+
+    section {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 599px) {
