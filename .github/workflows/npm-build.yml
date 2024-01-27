@@ -25,4 +25,15 @@ jobs:
 
     - name: build
       run: npm run build
+
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment: 
+      name: deploy-vercel
+      url: 'https://liroustore.vercel.app/'
+    steps:
+    - name: deploy
+      run: curl --location https://api.vercel.com/v1/integrations/deploy/prj_3xqNsOOgERDXYD5OTG3XbcaJblv2/ZqwP2Gp1hS
         
