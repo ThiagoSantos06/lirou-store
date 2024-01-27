@@ -15,32 +15,38 @@ export class ProdutosComponent {
 
   todosOsOculos = [
     {
-      nome: "CHEFE LIXO",
+      nome: "JULIET 24K - DOURADA",
+      valor: "R$ 130,00",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
 
     {
-      nome: "PENNY",
+      nome: "JULIET",
+      valor: "R$ 130,00",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
 
     {
-      nome: "DART",
+      nome: "JULIET 1.0",
+      valor: "R$ 130,00",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
 
     {
-      nome: "FLAK 10",
+      nome: "JULIET 2.0",
+      valor: "R$ 130,00",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
 
     {
-      nome: "FLAK 10",
+      nome: "JULIET 3.0",
+      valor: "R$ 130,00",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
 
     {
-      nome: "FLAK 10",
+      nome: "JULIET 4.0",
+      valor: "R$ 130,00",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
   ]

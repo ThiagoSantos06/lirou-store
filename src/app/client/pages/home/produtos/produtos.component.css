@@ -1,5 +1,25 @@
-h3, h4 {
+h3, h4, h5 {
     font-family: 'Inter', sans-serif;
+}
+
+h4 {
+    margin-top: 0.5rem;
+}
+
+h5 {
+    margin-top: 0.5rem;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    width: 10rem;
+    height: 2.5rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .juliet {
@@ -19,11 +39,6 @@ section {
     white-space: nowrap;
     display: flex;
     justify-content: flex-start;
-}
-
-h5 {
-    font-family: 'Inter', sans-serif;
-    margin-top: 0.5rem;
 }
 
 div {
