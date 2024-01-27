@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { GlassesService } from 'src/app/client/services/GlassesService';
+import { BodyGlassesDTO, GlassesDTO } from 'src/app/shared/models/GlassesDTO';
+import { imagens, todosOsOculos } from 'src/assets/sample';
 
 @Component({
   selector: 'app-destaques',
@@ -7,58 +9,19 @@ import { GlassesService } from 'src/app/client/services/GlassesService';
   styleUrls: ['./destaques.component.css']
 })
 export class DestaquesComponent {
-  listaDeOculos = []
-  constructor(private glassesService: GlassesService) {
-    
-  } 
+  listaDeOculosDaAPI: GlassesDTO[] = []
+  fotosDeExemplo = imagens
+  listaDeOculosDeExemplo = todosOsOculos
+
+  constructor(private glassesService: GlassesService) {}
   
-  fotoDosOculos = [
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-  ]
+  buscarOculosDaAPI(){
+    this.glassesService.getGlasses().subscribe((listaDeOculos: BodyGlassesDTO) => {
+      this.listaDeOculosDaAPI = listaDeOculos.content
+    })
+  }
 
-  todosOsOculos = [
-    {
-      nome: "JULIET",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "PENNY",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "ROMEO 2.0",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "VILÃO",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "DOUBLE X",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "24K",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-  ]
+  ngOnInit() {
+    this.buscarOculosDaAPI()
+  }
 }
