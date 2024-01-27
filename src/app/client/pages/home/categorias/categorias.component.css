@@ -1,10 +1,13 @@
-h3 {
+h1 {
     font-family: 'Inter', sans-serif;
 }
 
-h5 {
+h2 {
     font-family: 'Inter', sans-serif;
     margin-top: 0.5rem;
+    font-size: 1rem;
+    white-space: pre-line;
+    text-align: center;
 }
 
 div {
@@ -13,11 +16,16 @@ div {
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
+    margin-left: 1rem;
+    width: 8rem;
+    margin-top: 1rem;
 }
 
 img {
+    border-radius: 100%;
     height: 8rem;
     width: 8rem;
+    border: solid 3px black;
 }
 
 section {
@@ -26,10 +34,11 @@ section {
     white-space: nowrap;
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
 }
 
 @media screen and (min-width: 600px) {
-    .container-destaques {
+    .container-categorias {
         /* PC */
         margin-left: 2.3rem;
         margin-top: 0.5rem;
@@ -37,7 +46,7 @@ section {
 }
 
 @media screen and (max-width: 599px) {
-    .container-destaques {
+    .container-categorias {
         /* celular */
         margin-left: 1.5rem;
         margin-top: 0.5rem;
@@ -45,18 +54,18 @@ section {
 }
 
 @media screen and (min-width: 600px) {
-    h3 {
+    h1 {
       /* PC */
-      margin-top: 3rem;
+      margin-top: 10rem;
       margin-left: 35%;
       transform: translateX(-50%);
     }
 }
 
 @media screen and (max-width: 599px) {
-    h3 {
+    h1 {
         /* celular */
-        margin-top: 3rem;
+        margin-top: 5rem;
         margin-left: 1.5rem;
     }
 }

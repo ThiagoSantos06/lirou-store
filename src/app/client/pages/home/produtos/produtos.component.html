@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/inter@3.15.0/dist/inter.css">
+<h3>Produtos</h3>
+
+<section class="container-produtos">
+    <div *ngFor="let item of todosOsOculos"> 
+        <img src="{{item.foto}}" alt="" >
+        <h5>{{item.nome}}</h5>
+        <h4>{{item.valor}}</h4>
+        <button>COMPRAR</button>
+    </div>
+</section>
+
+<section class="container-produtos2">
+    <div *ngFor="let item of todosOsOculos"> 
+        <img src="{{item.foto}}" alt="" >
+        <h5>{{item.nome}}</h5>
+        <h4>{{item.valor}}</h4>
+        <button>COMPRAR</button>
+    </div>
+</section>
