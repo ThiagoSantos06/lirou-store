@@ -32,7 +32,7 @@ export class DestaquesComponent {
 
   todosOsOculos = [
     {
-      nome: "CHEFE LIXO",
+      nome: "JULIET",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
 
@@ -42,72 +42,52 @@ export class DestaquesComponent {
     },
 
     {
+      nome: "ROMEO 2.0",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
+
+    {
+      nome: "VILÃO",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
+
+    {
+      nome: "DOUBLE X",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
+
+    {
+      nome: "24K",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
+
+    {
+      nome: "CORVETTE",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
+
+    {
+      nome: "FLACK 1.0",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
+
+    {
+      nome: "FLACK 2.0",
+      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
+    },
+
+    {
       nome: "DART",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
 
     {
-      nome: "FLAK 10",
+      nome: "WIRE",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
 
     {
-      nome: "ROMEO 2",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "BRUSHED",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "PENNY 24K",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "JULIET 2.0",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "PICA GRANDE",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "PICA PEQUENA",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "JULIET AMANHÃ",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "PENNYS 2.0",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "ROMEO E JULIET",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "JULIET",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "ROMEO 2",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "ROMEO 2",
+      nome: "DESCANSO COM MOLINHAS",
       foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
     },
   ]
