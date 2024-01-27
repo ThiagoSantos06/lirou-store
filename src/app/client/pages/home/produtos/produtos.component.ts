@@ -6,13 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./produtos.component.css']
 })
 export class ProdutosComponent {
-  fotoDosOculos = [
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-    "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png",
-  ]
-
   todosOsOculos = [
     {
       nome: "JULIET 24K - DOURADA",
