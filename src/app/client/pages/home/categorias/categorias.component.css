@@ -35,6 +35,43 @@ section {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    
+}
+
+.botao-scroll {
+    position: absolute;
+    top: 52%; /* Posição vertical desejada */
+    right: 15px; /* Posição horizontal desejada */
+    z-index: 999; /* Certifica-se de que o botão apareça na frente de outros elementos, se necessário */
+    transform: translateY(-50%); /* Centraliza verticalmente o botão */
+    border-radius: 10rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: rgba(24, 24, 24, 0.562);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}  
+
+.botao-scroll-esquerda {
+    position: absolute;
+    top: 52%; /* Posição vertical desejada */
+    left: 52px; /* Posição horizontal desejada */
+    z-index: 999; /* Certifica-se de que o botão apareça na frente de outros elementos, se necessário */
+    transform: translateY(-50%); /* Centraliza verticalmente o botão */
+    border-radius: 10rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background-color: rgba(24, 24, 24, 0.562);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 /* PC */

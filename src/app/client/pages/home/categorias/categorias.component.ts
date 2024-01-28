@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-categorias',
@@ -68,17 +68,45 @@ export class CategoriasComponent {
     },
   ]
 
+  isScrolledRight: boolean = true; // Inicialmente, o botão de rolagem direito está visível
+  isScrolledLeft: boolean = false; // Inicialmente, o botão de rolagem esquerdo está invisível
+
+  constructor(private elementRef: ElementRef) {}
+
   ngOnInit() {
     const container = document.querySelector('.container-categorias');
-  
+    
     if (container) {
-      container.addEventListener('wheel', function(event) {
+      container.addEventListener('wheel', (event) => {
         event.preventDefault();
-  
+    
         const wheelEvent = event as WheelEvent;
         const delta = Math.sign(wheelEvent.deltaY);
         container.scrollLeft += delta * 30;
       }, { passive: false });
+  
+      container.addEventListener('scroll', () => {
+        this.updateScrollState(); // Atualiza o estado do scroll ao rolar
+      });
+    }
+  }
+
+  updateScrollState() {
+    const container = this.elementRef.nativeElement.querySelector('.container-categorias');
+    if (container) {
+      this.isScrolledLeft = container.scrollLeft > 0; // Verifica se o contêiner foi rolado para a direita
+      this.isScrolledRight = container.scrollLeft + container.clientWidth < container.scrollWidth - 1; // Verifica se o contêiner chegou ao final do lado direito
+    }
+  }
+
+  scrollHorizontal(amount: number) {
+    const container = this.elementRef.nativeElement.querySelector('.container-categorias');
+    
+    if (container) {
+      container.scrollTo({
+        left: container.scrollLeft + amount,
+        behavior: 'smooth' // Adiciona uma animação suave ao rolar
+      });
     }
   }
 }

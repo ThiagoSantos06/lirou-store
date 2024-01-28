@@ -5,5 +5,12 @@
     <div *ngFor="let item of todosOsOculos"> 
         <img src="{{item.foto}}" alt="" >
         <h2>{{item.nome}}</h2>
+        
     </div>
+
+    <button *ngIf="isScrolledLeft" (click)="scrollHorizontal(-170)" class="botao-scroll-esquerda"><</button>
+    <button *ngIf="isScrolledRight" (click)="scrollHorizontal(170)" class="botao-scroll">></button>
+    
 </section>
+
+<h3 *ngIf="false">Oi</h3>
