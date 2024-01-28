@@ -66,9 +66,9 @@ div {
     margin-right: 2rem;
 }
 
+/* PC */
 @media screen and (min-width: 600px) {
     h3 {
-      /* PC */
       margin-top: 3rem;
       margin-left: 35%;
       transform: translateX(-50%);
@@ -79,23 +79,24 @@ div {
         margin-left: 2.2rem;
     }
 
-    .container-produtos, .container-produtos2 {
+    .container-produtos {
         margin-top: 1rem;
         margin-left: 2.2rem;
-    }
-
-    section {
         flex-wrap: wrap;
     }
 
     .botao-scroll {
         display: none;
     }
+
+    .botao-scroll-esquerda {
+        display: none;
+    }
 }
 
+/* celular */
 @media screen and (max-width: 599px) {
     h3 {
-        /* celular */
         margin-top: 3rem;
         margin-left: 1.5rem;
     }
@@ -106,19 +107,14 @@ div {
         width: 90%;
     }
 
-    .container-produtos, .container-produtos2 {
+    .outer-produtos {
         margin-top: 1rem;
         margin-left: 1.5rem;
-    }
-
-    .outer-container {
         position: relative;
     }
-    
+
     .botao-scroll-esquerda, .botao-scroll {
-        position: absolute;
-        top: 152%;
-        transform: translateY(-50%);
+        position: absolute; /* Define os botões como fixos */
         background-color: #141414c5;
         border-radius: 50%;
         cursor: pointer;
@@ -127,6 +123,7 @@ div {
         font-size: 2rem;
         color: #ffffff;
         border: none;
+        top: 40%; /* Posicionamento vertical no meio da janela */
     }
     
     .botao-scroll-esquerda {
@@ -140,4 +137,5 @@ div {
     .botao-scroll-esquerda:hover, .botao-scroll:hover {
         background-color: #181818b7;
     }
+    
 }

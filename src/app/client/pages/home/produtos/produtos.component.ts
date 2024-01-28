@@ -15,10 +15,10 @@ export class ProdutosComponent {
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
-    this.activateHotizontalScroll()
+    this.activateHorizontalScroll()
   }
 
-  activateHotizontalScroll() {
+  activateHorizontalScroll() {
     const container = document.querySelector('.container-produtos');
     
     if (container) {
