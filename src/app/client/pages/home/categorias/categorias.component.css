@@ -94,4 +94,8 @@ section {
         margin-top: 5rem;
         margin-left: 1.5rem;
     }
+
+    .botao-scroll-esquerda, .botao-scroll {
+        cursor: none;
+    }
 }

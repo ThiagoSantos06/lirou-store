@@ -124,6 +124,7 @@ div {
         color: #ffffff;
         border: none;
         top: 40%; /* Posicionamento vertical no meio da janela */
+        cursor: none;
     }
     
     .botao-scroll-esquerda {
@@ -137,5 +138,4 @@ div {
     .botao-scroll-esquerda:hover, .botao-scroll:hover {
         background-color: #181818b7;
     }
-    
 }
