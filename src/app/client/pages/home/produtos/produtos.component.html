@@ -2,19 +2,10 @@
 <h3>Produtos</h3>
 
 <section class="container-produtos">
-    <div *ngFor="let item of todosOsOculos"> 
-        <img src="{{item.foto}}" alt="" >
-        <h5>{{item.nome}}</h5>
-        <h4>{{item.valor}}</h4>
-        <button>COMPRAR</button>
-    </div>
-</section>
-
-<section class="container-produtos2">
-    <div *ngFor="let item of todosOsOculos"> 
-        <img src="{{item.foto}}" alt="" >
-        <h5>{{item.nome}}</h5>
-        <h4>{{item.valor}}</h4>
+    <div *ngFor="let item of listaDeOculosDaAPI">
+        <img src="{{item.pic}}" alt="" >
+        <h5>{{item.title}}</h5>
+        <h4>R$ {{item.price}},00</h4>
         <button>COMPRAR</button>
     </div>
 </section>

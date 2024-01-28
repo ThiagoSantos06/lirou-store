@@ -13,4 +13,8 @@ constructor(private http:HttpClient) {
     getGlasses() {
         return this.http.get<BodyGlassesDTO>(`${environment.API_URL}/api/glasses`)
     }
+
+    getHighLightGlasses() {
+      return this.http.get<BodyGlassesDTO>(`${environment.API_URL}/api/glasses/highlights`)
+    }
 }

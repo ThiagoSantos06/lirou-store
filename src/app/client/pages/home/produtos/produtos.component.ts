@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {BodyGlassesDTO, GlassesDTO} from "../../../../shared/models/GlassesDTO";
+import {GlassesService} from "../../../services/GlassesService";
 
 @Component({
   selector: 'app-produtos',
@@ -6,41 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./produtos.component.css']
 })
 export class ProdutosComponent {
-  todosOsOculos = [
-    {
-      nome: "JULIET 24K - DOURADA",
-      valor: "R$ 130,00",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
+  listaDeOculosDaAPI: GlassesDTO[] = []
+  constructor(private glassesService: GlassesService) {}
 
-    {
-      nome: "JULIET",
-      valor: "R$ 130,00",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
+  buscarOculosDaAPI(){
+    this.glassesService.getGlasses().subscribe((listaDeOculos: BodyGlassesDTO) => {
+      this.listaDeOculosDaAPI = listaDeOculos.content
+    })
+  }
 
-    {
-      nome: "JULIET 1.0",
-      valor: "R$ 130,00",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "JULIET 2.0",
-      valor: "R$ 130,00",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "JULIET 3.0",
-      valor: "R$ 130,00",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "JULIET 3.0",
-      valor: "R$ 130,00",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-  ]
+  ngOnInit() {
+    this.buscarOculosDaAPI()
+  }
 }
