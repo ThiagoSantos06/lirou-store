@@ -35,9 +35,9 @@ section {
     justify-content: center;
 }
 
+/* PC */
 @media screen and (min-width: 600px) {
     .container-destaques {
-        /* PC */
         margin-left: 2.3rem;
         margin-top: 1rem;
     }
@@ -45,11 +45,15 @@ section {
     section {
         flex-wrap: wrap;
     }
+
+    h1 {
+        margin-top: 3rem;
+    }
 }
 
+/* celular */
 @media screen and (max-width: 599px) {
     .container-destaques {
-        /* celular */
         margin-top: 0.5rem;
     }
 
@@ -58,18 +62,8 @@ section {
         justify-content: flex-start;
         margin-left: 1.9rem;
     }
-}
 
-@media screen and (min-width: 600px) {
     h1 {
-      /* PC */
-      margin-top: 3rem;
-    }
-}
-
-@media screen and (max-width: 599px) {
-    h1 {
-        /* celular */
         margin-top: 3rem;
     }
 }
