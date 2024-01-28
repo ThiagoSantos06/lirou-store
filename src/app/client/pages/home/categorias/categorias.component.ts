@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-categorias',
@@ -74,6 +74,10 @@ export class CategoriasComponent {
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
+    this.activateHotizontalScroll()
+  }
+
+  activateHotizontalScroll() {
     const container = document.querySelector('.container-categorias');
     
     if (container) {
@@ -99,7 +103,7 @@ export class CategoriasComponent {
     }
   }
 
-  scrollHorizontal(amount: number) {
+  scrollHorizontally(amount: number) {
     const container = this.elementRef.nativeElement.querySelector('.container-categorias');
     
     if (container) {

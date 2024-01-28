@@ -2,19 +2,14 @@
 <h3>Produtos</h3>
 
 <section class="container-produtos">
+    <button *ngIf="isScrolledLeft" (click)="scrollHorizontally(-170)" class="botao-scroll-esquerda"><</button>
+    
     <div *ngFor="let item of todosOsOculos"> 
         <img src="{{item.foto}}" alt="" >
         <h5>{{item.nome}}</h5>
         <h4>{{item.valor}}</h4>
-        <button>COMPRAR</button>
+        <button class="botao-comprar">COMPRAR</button>
     </div>
-</section>
 
-<section class="container-produtos2">
-    <div *ngFor="let item of todosOsOculos"> 
-        <img src="{{item.foto}}" alt="" >
-        <h5>{{item.nome}}</h5>
-        <h4>{{item.valor}}</h4>
-        <button>COMPRAR</button>
-    </div>
+    <button *ngIf="isScrolledRight" (click)="scrollHorizontally(170)" class="botao-scroll">></button>
 </section>
