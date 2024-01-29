@@ -1,5 +1,40 @@
 <header>
-    <img src="assets/Design_sem_nome__9_-removebg-preview 6.png">
-    <img src="assets/Imagem_do_WhatsApp_de_2023-12-15_à_s__21.21 3.png">
-    <img src="assets/Design_sem_nome__2_-removebg-preview 1.png">
+  <img src="assets/Design_sem_nome__9_-removebg-preview 6.png" class="menu" (click)="toggleDiv()">
+  <img src="assets/Imagem_do_WhatsApp_de_2023-12-15_à_s__21.21 3.png">
+  <img src="assets/Design_sem_nome__2_-removebg-preview 1.png">
 </header>
+
+<div *ngIf="showDiv" class="overlay">
+  <div class="menu-title">Menu</div>
+  <div class="menu-content">
+    <h1>Links de contato:</h1>
+    <ul>
+      <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://web.whatsapp.com" target="_blank">Whatsapp</a></li>
+      <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCDlLFwnVmtKNkGLklmRxmbklkMQJZtqXztfGJsvKcDbTPNLlTGvZzhQsVpMhnRzsXtlzL" target="_blank">G-mail</a></li>
+    </ul>
+  </div>
+
+  <div class="menu-content">
+    <h1>Serviços:</h1>
+    <ul>
+      <li>Entrega Rápida</li>
+      <li>Garantia do Produto</li>
+      <li>Atendimento ao Cliente</li>
+    </ul>
+  </div>
+
+  <div class="center-button">
+    <button class="ajustar-botao-celular">Calcular frete</button>
+  </div>
+
+  <div class="menu-divider"></div> <!-- Linha fininha -->
+
+  <div class="terms-of-use">
+    <a href="url_do_seu_termo_de_uso" id="ajuste-celular">Termos de Uso</a>
+  </div>
+
+  <div class="privacy-policy">
+    <a href="url_da_sua_politica_de_privacidade" id="ajuste-celular">Política de Privacidade</a>
+  </div>
+</div>
