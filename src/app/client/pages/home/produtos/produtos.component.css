@@ -138,4 +138,8 @@ div {
     .botao-scroll-esquerda:hover, .botao-scroll:hover {
         background-color: #181818b7;
     }
+
+    .botao-comprar {
+        cursor: none;
+    }
 }

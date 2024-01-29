@@ -5,9 +5,9 @@
     <button *ngIf="isScrolledLeft" (click)="scrollHorizontally(-170)" class="botao-scroll-esquerda"><</button>
     
     <section class="container-categorias">
-        <div *ngFor="let item of todosOsOculos"> 
-            <img src="{{item.foto}}" alt="" >
-            <h2>{{item.nome}}</h2>
+        <div *ngFor="let item of listaDeOculosDaAPI"> 
+            <img src="{{item.pic}}" alt="" >
+            <h2>{{item.title}}</h2>
         </div>
     </section>
 
