@@ -95,7 +95,60 @@ h4 {
 }
 
 .toggle-password img {
-    width: 1.5rem; /* Tamanho ajustável conforme necessário */
+    width: 1.5rem;
+    height: auto;
+}
+
+.email-icon-container {
+    position: relative;
+}
+
+.email-icon {
+    position: absolute;
+    right: 6rem;
+    transform: translateY(-210%);
+    width: 1.5rem;
+    height: auto;
+}
+
+/* Posicionar textos do input */
+
+.email-input, .tel-input, .password-input {
+    position: relative;
+}
+
+.email-input::placeholder, .tel-input::placeholder, .password-input::placeholder {
+    position: absolute;
+    left: 1rem;
+}
+
+.email-input, .tel-input, .password-input {
+    text-indent: 2.5rem;
+}
+
+/* Posicionar textos do input */
+
+.tel-icon-container {
+    position: relative;
+}
+
+.tel-icon {
+    position: absolute;
+    right: 6rem;
+    transform: translateY(-235%);
+    width: 1.2rem;
+    height: auto;
+}
+
+.icon-password {
+    position: absolute;
+    top: 40%;
+    left: 1.2rem;
+    transform: translateY(-50%);
+}
+
+.icon-password img {
+    width: 1.5rem;
     height: auto;
 }
 

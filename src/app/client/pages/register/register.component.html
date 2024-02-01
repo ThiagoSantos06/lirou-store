@@ -5,14 +5,25 @@
 <div class="line-title"></div>
 
 <div class="input-container">
-    <input type="email" placeholder="Email">
-    <input type="tel" placeholder="Telefone" [(ngModel)]="telefone" pattern="[0-9]*">
+    <input type="email" placeholder="Email" class="email-input">
+    <div class="email-icon-container">
+        <img src="assets/email-and-mail-icon-black-free-png 5.png" class="email-icon">
+    </div>
+    
+    <input type="tel" placeholder="Telefone" [(ngModel)]="telefone" pattern="[0-9]*" class="tel-input">
+    <div class="tel-icon-container">
+        <img src="assets/cellphone.png" class="tel-icon">
+    </div>
 
     <div class="input-container-password">
         <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Senha" [(ngModel)]="password" #passwordInput class="password-input">
         <button class="toggle-password" (click)="togglePasswordVisibility()">
             <img src="{{ showPassword ? 'assets/eye.png' : 'assets/eye2.png' }}">
         </button>
+
+        <div class="icon-password">
+            <img src="assets/senha.png">
+        </div>
     </div>
 
     <div class="input-container-password">
@@ -20,6 +31,10 @@
         <button class="toggle-password" (click)="toggleConfirmPasswordVisibility()">
             <img src="{{ showConfirmPassword ? 'assets/eye.png' : 'assets/eye2.png' }}">
         </button>
+
+        <div class="icon-password">
+            <img src="assets/senha.png">
+        </div>
     </div>
 
     <button class="create-account">
