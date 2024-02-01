@@ -1,7 +1,11 @@
 <header>
   <img src="assets/Design_sem_nome__9_-removebg-preview 6.png" class="menu" (click)="toggleDiv()">
   <img src="assets/Imagem_do_WhatsApp_de_2023-12-15_à_s__21.21 3.png">
-  <img src="assets/Design_sem_nome__2_-removebg-preview 1.png">
+  <nav>
+    <a routerLink="/cart">
+      <img src="assets/Design_sem_nome__2_-removebg-preview 1.png"> 
+    </a>
+  </nav>
 </header>
 
 <div *ngIf="showDiv" class="overlay">
@@ -24,17 +28,13 @@
     </ul>
   </div>
 
-  <div class="center-button">
-    <button class="ajustar-botao-celular">Calcular frete</button>
-  </div>
-
   <div class="menu-divider"></div> <!-- Linha fininha -->
 
   <div class="terms-of-use">
-    <a href="url_do_seu_termo_de_uso" id="ajuste-celular">Termos de Uso</a>
+    <a href="url_do_seu_termo_de_uso" class="ajuste-celular">Termos de Uso</a>
   </div>
 
   <div class="privacy-policy">
-    <a href="url_da_sua_politica_de_privacidade" id="ajuste-celular">Política de Privacidade</a>
+    <a href="url_da_sua_politica_de_privacidade" class="ajuste-celular">Política de Privacidade</a>
   </div>
 </div>
