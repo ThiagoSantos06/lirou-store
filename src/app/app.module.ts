@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './client/pages/home/footer/footer.component';
 import { AppRoutingModule } from './app.routing.module';
 import { RegisterComponent } from './client/pages/register/register.component';
+import { LoginComponent } from './client/pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,13 @@ import { RegisterComponent } from './client/pages/register/register.component';
     CartComponent,
     FooterComponent,
     RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
