@@ -23,6 +23,20 @@ input::placeholder {
   color: #23232398;
 }
 
+
+img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+  transform: scale(1.5);
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
 @media only screen and (min-width: 431px) {
   input {
     border: none;
@@ -51,11 +65,4 @@ input::placeholder {
   input {
     width: 35rem;
   }
-}
-
-img {
-  width: 2.5rem;
-  height: 2.5rem;
-  object-fit: cover;
-  transform: scale(1.5);
 }
