@@ -18,7 +18,7 @@ export class ProdutosComponent {
   isScrolledLeft: boolean = false; // Inicialmente, o botão de rolagem esquerdo está invisível
 
   constructor(private elementRef: ElementRef, private glassesService: GlassesService, private ProductService: ProductService) {}
-  
+
   buscarOculosDaAPI(){
     this.glassesService.getGlasses().subscribe((listaDeOculos: BodyGlassesDTO) => {
       this.listaDeOculosDaAPI = listaDeOculos.content
@@ -36,7 +36,7 @@ export class ProdutosComponent {
 
   activateHorizontalScroll() {
     const container = document.querySelector('.container-produtos');
-    
+
     if (container) {
       container.addEventListener('scroll', () => {
         this.updateScrollState(); // Atualiza o estado do scroll ao rolar
@@ -54,7 +54,7 @@ export class ProdutosComponent {
 
   scrollHorizontally(amount: number) {
     const container = this.elementRef.nativeElement.querySelector('.container-produtos');
-    
+
     if (container) {
       container.scrollTo({
         left: container.scrollLeft + amount,

@@ -14,8 +14,9 @@ import { FooterComponent } from './client/pages/home/footer/footer.component';
 import { AppRoutingModule } from './app.routing.module';
 import { RegisterComponent } from './client/pages/register/register.component';
 import { LoginComponent } from './client/pages/login/login.component';
-import { DetalhesDosProdutosComponent } from './client/pages/home/detalhes-dos-produtos/detalhes-dos-produtos.component';
+import { DetalhesDosProdutosComponent } from './client/pages/purchase-product/detalhes-dos-produtos/detalhes-dos-produtos.component';
 import { ProductService } from './client/services/ProductService';
+import { PurchaseProductComponent } from './client/pages/purchase-product/purchase-product.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductService } from './client/services/ProductService';
     FooterComponent,
     RegisterComponent,
     LoginComponent,
-    DetalhesDosProdutosComponent
+    DetalhesDosProdutosComponent,
+    PurchaseProductComponent
   ],
   imports: [
     BrowserModule,
