@@ -1,6 +1,7 @@
 import { Component, ElementRef,  } from '@angular/core';
 import {BodyGlassesDTO, GlassesDTO} from "../../../../shared/models/GlassesDTO";
 import {GlassesService} from "../../../services/GlassesService";
+import { ProductService } from 'src/app/client/services/ProductService';
 // import { todosOsOculosComValor } from 'src/assets/sample';
 
 @Component({
@@ -16,12 +17,16 @@ export class ProdutosComponent {
   isScrolledRight: boolean = true; // Inicialmente, o botão de rolagem direito está visível
   isScrolledLeft: boolean = false; // Inicialmente, o botão de rolagem esquerdo está invisível
 
-  constructor(private elementRef: ElementRef, private glassesService: GlassesService) {}
+  constructor(private elementRef: ElementRef, private glassesService: GlassesService, private ProductService: ProductService) {}
   
   buscarOculosDaAPI(){
     this.glassesService.getGlasses().subscribe((listaDeOculos: BodyGlassesDTO) => {
       this.listaDeOculosDaAPI = listaDeOculos.content
     })
+  }
+
+  navigateToProduct(productId: string) {
+    this.ProductService.navigateToProduct(productId);
   }
 
   ngOnInit() {

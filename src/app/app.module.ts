@@ -14,6 +14,8 @@ import { FooterComponent } from './client/pages/home/footer/footer.component';
 import { AppRoutingModule } from './app.routing.module';
 import { RegisterComponent } from './client/pages/register/register.component';
 import { LoginComponent } from './client/pages/login/login.component';
+import { DetalhesDosProdutosComponent } from './client/pages/home/detalhes-dos-produtos/detalhes-dos-produtos.component';
+import { ProductService } from './client/services/ProductService';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { LoginComponent } from './client/pages/login/login.component';
     FooterComponent,
     RegisterComponent,
     LoginComponent,
+    DetalhesDosProdutosComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { LoginComponent } from './client/pages/login/login.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
