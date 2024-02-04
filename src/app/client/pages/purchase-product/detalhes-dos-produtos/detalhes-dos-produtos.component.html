@@ -1,1 +1,26 @@
-<h1>{{glasses.title}}</h1>
+<app-header></app-header>
+
+<section class="container-produto">
+    <div class="container-itens">
+        <img src="{{glasses.pic}}">
+        <div class="container-info">
+            <h1>{{glasses.title}}</h1>
+            <h2>R$ {{glasses.price}},00</h2>
+            <div class="container-quantidade">
+                <h3  class="quantidade-mais">-</h3>
+                <h3>1</h3>
+                <h3 class="quantidade-menos">+</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="botoes">
+    <button class="botao-comprar">Comprar</button>
+    <button class="botao-carrinho">Adicionar ao carrinho</button>
+</div>
+
+<h2 class="descricao-do-produto">Descrição</h2>
+<p class="paragrafo-produto">Esse óculos é o ma foda que tem, ele brilha no escuro e tudo mais haha</p>
+<h2 class="guia-do-produto">Guia de uso</h2>
+<p class="paragrafo-guia">puxa a perna e coloca no rosto igual xana</p>
