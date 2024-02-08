@@ -5,11 +5,11 @@
     <button *ngIf="isScrolledLeft" (click)="scrollHorizontally(-170)" class="botao-scroll-esquerda"><</button>
 
     <section class="container-produtos">
-        <div *ngFor="let item of listaDeOculosDaAPI">
-            <img src="{{item.pic}}" alt="" >
+        <div *ngFor="let item of listaDeOculosDaAPI" >
+            <img src="{{item.pic}}" alt="" (click)="navigateToProduct(item.identifier)">
             <h5>{{item.title}}</h5>
             <h4>R$ {{item.price}},00</h4>
-           <button class="botao-comprar" (click)="navigateToProduct(item.identifier)">COMPRAR</button>
+            <button class="botao-comprar" (click)="navigateToProduct(item.identifier)">COMPRAR</button>
         </div>
     </section>
     <button *ngIf="isScrolledRight" (click)="scrollHorizontally(170)" class="botao-scroll">></button>

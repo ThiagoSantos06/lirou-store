@@ -97,5 +97,18 @@ section {
 
     .botao-scroll-esquerda, .botao-scroll {
         cursor: none;
+        background-color: #141414;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .botao-scroll-esquerda:hover, .botao-scroll:hover {
+        background-color: #222222;
+    }
+
+    img {
+        width: 6rem;
+        height: 6rem;
     }
 }
