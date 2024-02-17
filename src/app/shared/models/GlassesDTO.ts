@@ -14,4 +14,3 @@ export interface GlassesDTO {
         brand: string
         price: number
 }
-

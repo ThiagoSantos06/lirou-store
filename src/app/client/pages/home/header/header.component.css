@@ -1,3 +1,7 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -6,9 +10,115 @@ header {
     height: 7rem;
 }
 
+.menu {
+    cursor: pointer;
+}
+
 img {
     width: 6.5rem;
     height: 6.5rem;
     object-fit: cover;
 }
 
+.overlay {
+    border-radius: 0 0 1rem 0;
+    position: absolute;
+    width: 25%;
+    height: 75%;
+    background-color: #282828;
+    z-index: 1;
+}
+
+.menu-title {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+    border-bottom: 2px solid #888888; /* Adicionando uma linha de separação */
+}
+
+.menu-content {
+    padding: 1rem;
+    color: white;
+}
+
+.menu-content p {
+    margin: 0;
+}
+
+ul {
+    margin-top: 0.5rem;
+}
+
+li {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+}
+
+a {
+    color: white; /* Cor padrão para links */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+a:hover {
+    color: rgb(101, 101, 219); /* Cor do link quando o mouse passa sobre ele */
+}
+
+a:visited {
+    color: none;
+}
+
+.terms-of-use {
+    position: absolute;
+    bottom: 1.5rem; /* Distância do fundo da div */
+    left: 0;
+    width: 100%;
+    padding: 8px 0;
+    border-top: 2px solid #888888;
+    text-align: center;
+}
+
+.terms-of-use a:hover {
+    color: rgb(101, 101, 219);;
+}
+
+.privacy-policy {
+    position: absolute;
+    bottom: 0; /* Estará 0px abaixo do link de Termos de Uso */
+    left: 0;
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+nav a {
+    color: black;
+}
+
+@media screen and (max-width: 599px) {
+    .menu {
+        cursor: none;
+    }
+
+    .overlay {
+        width: 55%;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    li {
+        margin-top: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    a {
+        cursor: none;
+    }
+
+    .ajuste-celular {
+        font-size: 0.9rem;
+    }
+}

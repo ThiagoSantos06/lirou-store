@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<section class="container-produto">
+    <div class="container-itens">
+        <img src="{{glasses.pic}}">
+        <div class="container-info">
+            <h1>{{glasses.title}}</h1>
+            <h2>R$ {{glasses.price}},00</h2>
+            <div class="container-quantidade">
+                <h3 class="quantidade-mais">-</h3>
+                <h3>{{glasses.quantityInStock}}</h3>
+                <h3 class="quantidade-menos">+</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="botoes">
+    <button class="botao-comprar">Comprar</button>
+    <button class="botao-carrinho">Adicionar ao carrinho</button>
+</div>
+
+<section class="frete-container" >
+    <div class="container-frete">
+        <h4 class="frete-title">Calcular frete</h4>
+    </div>
+
+    <div class="custom-select">
+        <select [(ngModel)]="opcaoSelecionada" (change)="onChange()">
+            <option value="opcao1">Areeiro - R$ 10,00</option>
+            <option value="opcao2">Lagoa das garças - R$ 20,00</option>
+            <option value="opcao3">Cajueiro Seco - R$ 30,00</option>
+            <option value="opcao4">Jardim Piedade - R$ 40,00</option>
+            <option value="opcao5">Piedade - R$ 50,00</option>
+            <option value="nenhum">Nenhum</option>
+        </select>
+    </div>
+            
+    <div *ngIf="opcaoSelecionada === 'nenhum'">
+        <p class="texto1">Calcule seu CEP</p>
+        <div class="frete-div">
+            <input [(ngModel)]="inputUsuario" type="text" placeholder="Digite seu CEP" maxlength="9" id="cepInput" (input)="formatarCEP($event)">
+            <button (click)="calcularOFrete()">Calcular</button>
+        </div>
+        <p><a href="">Não sei meu CEP</a></p>
+    </div>
+
+    <div class="container-frete">
+        <div class="options-fretes" *ngIf="valoresDosFretes.length > 0">
+            <div *ngFor="let frete of valoresDosFretes; let i = index" class="option">
+                <label class="radio-label">
+                    <input type="radio" name="freteSelecionado" [value]="frete">
+                    <span class="frete-details">
+                        <span class="frete-name">{{frete.name}}</span>
+                        <span class="frete-price">R$ {{frete.price}}</span>
+                    </span>
+                </label>
+                <div class="divider" *ngIf="i !== valoresDosFretes.length - 1"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="informacoes">
+    <h2 class="descricao-do-produto">Descrição</h2>
+    <p class="paragrafo-produto">Esse óculos é o ma foda que tem, ele brilha no escuro e tudo mais haha</p>
+    <h2 class="guia-do-produto">Guia de uso</h2>
+    <p class="paragrafo-guia">puxa a perna e coloca no rosto igual xana</p>
+</section>
+
+<app-footer></app-footer>

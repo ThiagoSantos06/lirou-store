@@ -1,0 +1,579 @@
+* {
+    font-family: 'Inter', sans-serif; 
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    font-weight: 150;
+}
+
+img {
+    border: solid 3px black;
+    border-radius: 0.5rem;
+    width: 12rem;
+    height: 12rem;
+}
+
+section {
+    display: flex;
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+
+.container-itens {
+    display: flex;
+}
+
+.container-info {
+    margin-left: 2rem;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.descricao-do-produto {
+    font-weight: 100;
+    color: #4E4E4E;
+}
+
+.guia-do-produto {
+    font-weight: 100;
+    color: #4E4E4E;
+}
+
+.paragrafo-produto {
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+.paragrafo-guia {
+    margin-top: 0.5rem;
+}
+
+/* INFORMAÇÕES */
+
+/* FRETE */
+
+.frete-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto 0;
+    width: 16.4rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    margin-right: 5rem;
+    position: relative; /* Permite o uso de valores top, left, right, bottom */
+    top: -14.5rem; /* Move a section para cima */
+}
+
+.frete-div {
+    display: flex;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    width: 15.7rem;
+    padding: 0.5rem;
+    border: solid 2px;
+    border-color: #545454;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.frete-container input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #232323ea;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+}
+
+.frete-container button {
+    background-color: #0166FF;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    cursor: pointer;
+    height: 2rem;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.frete-container button:active {
+    background-color: #0854c7;
+}
+
+.frete-container a{
+    text-decoration: none;
+    color: #0166FF;
+    font-size: 0.9rem
+}
+
+.frete-container p {
+    margin-left: 0.5rem;
+}
+
+.frete-container .texto1 {
+    font-weight: bold;
+    color: #545454;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* FRETE */
+
+/* OPÇÕES DE FRETES */
+
+.container-frete {
+    padding: 1rem; /* Adiciona um espaço interno */
+}
+
+.frete-title {
+    color: #545454;
+    font-weight: bold;
+    position: relative;
+    right: 0.5rem;
+}
+
+.options-fretes {
+    border: 2px solid #545454; /* Adiciona uma borda ao redor das opções de frete */
+    width: 16.6rem;
+    border-radius: 0.5rem; /* Arredonda os cantos da borda */
+    right: 1rem;
+    position: relative;
+}
+
+.radio-label {
+    display: flex; /* Para colocar os elementos lado a lado */
+    align-items: center; /* Para alinhar os elementos verticalmente */
+    cursor: pointer; /* Para tornar o cursor um ponteiro ao passar sobre o rótulo */
+    padding: 1rem; /* Adiciona um espaço interno */
+}
+
+.radio-label:not(:last-child) {
+    border-bottom: 2px solid #545454; /* Adiciona uma linha separando cada item, exceto o último */
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 1rem; /* Adiciona um espaço entre o radio button e o texto */
+    transform: scale(1.3); /* Aumenta o tamanho do radio button */
+}
+
+.frete-details {
+    font-size: 1rem;
+    display: flex; /* Para alinhar o nome e o preço horizontalmente */
+    justify-content: space-between; /* Para espaçamento igual entre o nome e o preço */
+    width: 100%; /* Para que o texto não quebre em várias linhas */
+}
+
+.frete-name, .frete-price {
+    color: #545454;
+    font-weight: bold;
+}
+
+/* OPÇÕES DE FRETES */
+
+/* SELECT */
+
+.custom-select select {
+    border-radius: 5px;
+    border: 2px solid #545454; /* Define a largura, estilo e cor da borda */
+    color: #545454;
+    width: 17rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    padding: 8px;
+}
+
+/* SELECT */
+
+/* PC */
+@media screen and (min-width: 1080px) {
+    .botoes {
+        display: flex;
+        justify-content: right;
+        position: relative;
+        top: -12rem; /* Ajustando a posição inicial dos botões de cima para baixo */
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 5rem;
+    }
+
+    .botao-comprar {
+        width: 17rem;
+        height: 4rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        background-color: #0166FF;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: 1s;
+    }
+
+    .botao-comprar:hover {
+        background-color: #0854c7;
+    }
+
+    .botao-carrinho:hover {
+        background-color: #bad5e9;
+    }
+
+    .botao-carrinho {
+        width: 17rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        background-color: #bee3ff;
+        color: #0166FF;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: 1s;
+    }
+
+    .container-quantidade {
+        border: 2px solid;
+        border-radius: 1.5rem;
+        width: 6.5rem;
+        height: 2rem;
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .quantidade-mais, .quantidade-menos {
+        cursor: pointer;
+        font-size: 1.7rem;
+        font-weight: 150;
+    }
+}
+
+/* OUTROS */
+@media screen and (max-width: 1079px) {
+    .botoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .botao-comprar {
+        width: 35rem;
+        height: 4rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        background-color: #0166FF;
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: 1s;
+    }
+
+    .botao-comprar:hover {
+        background-color: #0854c7;
+    }
+
+    .botao-carrinho:hover {
+        background-color: #bad5e9;
+    }
+
+    .botao-carrinho {
+        width: 35rem;
+        height: 4rem;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        background-color: #bee3ff;
+        color: #0166FF;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: 1s;
+    }
+
+    /* FRETE */
+
+    .frete-container {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem auto 0;
+        width: 16.4rem;
+        padding: 0.5rem;
+        background-color: transparent;
+        position: relative; /* Permite o uso de valores top, left, right, bottom */
+        top: -2rem; /* Move a section para cima */
+    }
+
+    .frete-div {
+        display: flex;
+        border-radius: 0.3rem;
+        background-color: transparent;
+        padding: 0.5rem;
+        border: solid 2px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .frete-container input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #232323ea;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .frete-container button {
+        background-color: #0166FF;
+        color: white;
+        border: none;
+        border-radius: 0.2rem;
+        outline: none;
+        cursor: pointer;
+        height: 2rem;
+        transition: 0.2s;
+        font-weight: bold;
+    }
+
+    .frete-container button:active {
+        background-color: #0854c7;
+    }
+
+    .frete-container a{
+        text-decoration: none;
+        color: #0166FF;
+        font-size: 0.9rem
+    }
+
+    .frete-container p {
+        margin-left: 0.5rem;
+    }
+
+    .frete-container .texto1 {
+        font-size: 0.9rem;
+    }
+
+    /* FRETE */
+
+    .container-quantidade {
+        border: 2px solid;
+        border-radius: 1.5rem;
+        width: 6.5rem;
+        height: 2rem;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .quantidade-mais, .quantidade-menos {
+        cursor: pointer;
+        font-size: 1.7rem;
+        font-weight: 150;
+    }
+}
+
+/* celular */
+@media screen and (max-width: 599px) {
+    section {
+        display: flex;
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    .container-info {
+        margin-left: 1rem;
+    }
+
+    img {
+        border: solid 3px black;
+        border-radius: 0.5rem;
+        width: 10rem;
+        height: 10rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+        font-weight: 150;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .botao-comprar {
+        background-color: #0166FF;
+        transition: 1s;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 20rem;
+        height: 4rem;
+        cursor: none;
+    }
+
+    .botao-comprar:hover {
+        background-color: #0854c7;
+    }
+
+    .botao-carrinho:hover {
+        background-color: #bad5e9;
+    }
+
+    .botao-carrinho {
+        background-color: #bee3ff;
+        transition: 1s;
+        color: #0166FF;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 20rem;
+        height: 4rem;
+        cursor: none;
+        margin-bottom: 0.5rem;
+    }
+
+    /* FRETE */
+
+    .frete-container {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem auto 0;
+        width: 16.4rem;
+        padding: 0.5rem;
+        background-color: transparent;
+        position: relative; /* Permite o uso de valores top, left, right, bottom */
+        top: -2rem; /* Move a section para cima */
+    }
+
+    .frete-div {
+        display: flex;
+        border-radius: 0.3rem;
+        background-color: transparent;
+        width: 15.7rem;
+        padding: 0.5rem;
+        border: solid 2px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .frete-container input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #232323ea;
+        width: inherit;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    .frete-container button {
+        background-color: #0166FF;
+        color: white;
+        border: none;
+        border-radius: 0.2rem;
+        outline: none;
+        cursor: pointer;
+        height: 2rem;
+        transition: 0.2s;
+        font-weight: bold;
+    }
+
+    .frete-container button:active {
+        background-color: #0854c7;
+    }
+
+    .frete-container a{
+        text-decoration: none;
+        color: #0166FF;
+        font-size: 0.9rem
+    }
+
+    .frete-container p {
+        margin-left: 0.5rem;
+    }
+
+    .frete-container .texto1 {
+        font-size: 0.9rem;
+    }
+
+    /* FRETE */
+
+    .descricao-do-produto {
+        font-weight: 100;
+        margin-left: 2rem;
+        color: #4E4E4E;
+    }
+    
+    .paragrafo-produto {
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        margin-top: 0.5rem;
+    }
+    
+    .paragrafo-guia {
+        margin-left: 2rem;
+        margin-top: 0.5rem;
+    }
+    
+    .guia-do-produto {
+        font-weight: 100;
+        color: #4E4E4E;
+        margin-left: 2rem;
+    }
+
+    .container-quantidade {
+        border: 2px solid;
+        border-radius: 1.5rem;
+        width: 5.5rem;
+        height: 1.5rem;
+        margin-top: 4.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .quantidade-mais, .quantidade-menos {
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .paragrafo-guia {
+        margin-bottom: 1rem;
+    }
+}

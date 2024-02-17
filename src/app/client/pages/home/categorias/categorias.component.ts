@@ -1,4 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
+import {BodyGlassesDTO, GlassesDTO} from "../../../../shared/models/GlassesDTO";
+import {GlassesService} from "../../../services/GlassesService";
 
 @Component({
   selector: 'app-categorias',
@@ -6,74 +8,22 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./categorias.component.css']
 })
 export class CategoriasComponent {
-  todosOsOculos = [
-    {
-      nome: "JULIET",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
 
-    {
-      nome: "PENNY",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "ROMEO 2.0",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "VILÃO",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "DOUBLE X",
-      foto: "https://eomajdtriisxygrrtrlx.supabase.co/storage/v1/object/public/imagens/Double%20X.jpg"
-    },
-
-    {
-      nome: "24K",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "CORVETTE",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "FLACK 1.0",
-      foto: "https://eomajdtriisxygrrtrlx.supabase.co/storage/v1/object/public/imagens/Flack%201.0.jpg"
-    },
-
-    {
-      nome: "FLACK 2.0",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-
-    {
-      nome: "DART",
-      foto: "https://eomajdtriisxygrrtrlx.supabase.co/storage/v1/object/public/imagens/Dart.jpg"
-    },
-
-    {
-      nome: "WIRE",
-      foto: "https://eomajdtriisxygrrtrlx.supabase.co/storage/v1/object/public/imagens/Wire.jpg"
-    },
-
-    {
-      nome: "DESCANSO COM MOLINHAS",
-      foto: "https://byrbtssdegflenaymewl.supabase.co/storage/v1/object/public/liroustore/lupinha.png"
-    },
-  ]
+  listaDeOculosDaAPI: GlassesDTO[] = []
 
   isScrolledRight: boolean = true; // Inicialmente, o botão de rolagem direito está visível
   isScrolledLeft: boolean = false; // Inicialmente, o botão de rolagem esquerdo está invisível
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private glassesService: GlassesService) {}
+
+  buscarOculosDaAPI(){
+    this.glassesService.getGlasses().subscribe((listaDeOculos: BodyGlassesDTO) => {
+      this.listaDeOculosDaAPI = listaDeOculos.content
+    })
+  }
 
   ngOnInit() {
+    this.buscarOculosDaAPI()
     this.activateHotizontalScroll()
   }
 

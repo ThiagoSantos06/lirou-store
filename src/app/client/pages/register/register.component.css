@@ -1,0 +1,161 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 5rem;
+    color: #0066FF;
+}
+
+.line-title {
+    width: 8rem;
+    height: 0.3rem;
+    background-color: #0166FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    padding: 5px 15px;
+    border-color: black;
+    outline: none;
+}
+
+input::placeholder {
+    color: #282828;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2rem;
+    width: 17rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #0166FF;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.create-account:hover {
+    background-color: rgb(29, 29, 29);
+}
+
+h5 {
+    margin-top: 0.7rem;
+}
+
+h5 a {
+    text-decoration: none;
+}
+
+h5 span {
+    color: #0066FF;
+}
+
+h4 {
+    text-align: center;
+    position: fixed;
+    bottom: 0.8rem;
+}
+
+.input-container-password {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 40%;
+    right: 1.2rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.toggle-password img {
+    width: 1.5rem;
+    height: auto;
+}
+
+.email-icon-container {
+    position: relative;
+}
+
+.email-icon {
+    position: absolute;
+    right: 6rem;
+    transform: translateY(-210%);
+    width: 1.5rem;
+    height: auto;
+}
+
+/* Posicionar textos do input */
+
+.email-input, .tel-input, .password-input {
+    position: relative;
+}
+
+.email-input::placeholder, .tel-input::placeholder, .password-input::placeholder {
+    position: absolute;
+    left: 1rem;
+}
+
+.email-input, .tel-input, .password-input {
+    text-indent: 2.5rem;
+}
+
+/* Posicionar textos do input */
+
+.tel-icon-container {
+    position: relative;
+}
+
+.tel-icon {
+    position: absolute;
+    right: 6rem;
+    transform: translateY(-235%);
+    width: 1.2rem;
+    height: auto;
+}
+
+.icon-password {
+    position: absolute;
+    top: 40%;
+    left: 1.2rem;
+    transform: translateY(-50%);
+}
+
+.icon-password img {
+    width: 1.5rem;
+    height: auto;
+}
+
+/* Celular */
+@media screen and (max-width: 599px) {
+    h4 {
+        font-size: 0.8rem;
+    }
+}
