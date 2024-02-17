@@ -17,6 +17,7 @@ import { LoginComponent } from './client/pages/login/login.component';
 import { DetalhesDosProdutosComponent } from './client/pages/purchase-product/detalhes-dos-produtos/detalhes-dos-produtos.component';
 import { ProductService } from './client/services/ProductService';
 import { PurchaseProductComponent } from './client/pages/purchase-product/purchase-product.component';
+import { CalculateShippingComponent } from './client/pages/purchase-product/calculate-shipping/calculate-shipping.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PurchaseProductComponent } from './client/pages/purchase-product/purcha
     RegisterComponent,
     LoginComponent,
     DetalhesDosProdutosComponent,
-    PurchaseProductComponent
+    PurchaseProductComponent,
+    CalculateShippingComponent,
   ],
   imports: [
     BrowserModule,
