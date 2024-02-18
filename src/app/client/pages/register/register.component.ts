@@ -33,4 +33,20 @@ export class RegisterComponent implements OnInit{
       this.confirmPasswordInputRef.nativeElement.type = this.showConfirmPassword ? 'text' : 'password';
     }
   }
+
+  formatarNumeroCelular(): void {
+    // Remover caracteres não numéricos
+    this.telefone = this.telefone.replace(/\D/g, '');
+
+    // Adicionar parênteses e traço
+    if (this.telefone.length >= 2 && this.telefone.length < 3) {
+      this.telefone = `(${this.telefone}`;
+    } else if (this.telefone.length >= 3 && this.telefone.length < 7) {
+      this.telefone = `(${this.telefone.slice(0, 2)}) ${this.telefone.slice(2)}`;
+    } else if (this.telefone.length >= 7 && this.telefone.length < 11) {
+      this.telefone = `(${this.telefone.slice(0, 2)}) ${this.telefone.slice(2, 6)}-${this.telefone.slice(6)}`;
+    } else if (this.telefone.length >= 11) {
+      this.telefone = `(${this.telefone.slice(0, 2)}) ${this.telefone.slice(2, 7)}-${this.telefone.slice(7)}`;
+    }
+  }
 }

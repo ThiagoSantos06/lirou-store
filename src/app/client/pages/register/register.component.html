@@ -1,46 +1,69 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/inter@3.15.0/dist/inter.css">
 
-<h1>Criar conta</h1>
+<body class="formulario-cadastro">
+    <main>
+        <h1>Criar conta</h1>
 
-<div class="line-title"></div>
-
-<div class="input-container">
-    <input type="email" placeholder="Email" class="email-input">
-    <div class="email-icon-container">
-        <img src="assets/email-and-mail-icon-black-free-png 5.png" class="email-icon">
-    </div>
+        <div class="voltar-button">
+            <a routerLink="/">
+                <img src="assets/voltar.png" class="voltar-img"> 
+            </a>
+        </div>
     
-    <input type="tel" placeholder="Telefone" [(ngModel)]="telefone" pattern="[0-9]*" class="tel-input">
-    <div class="tel-icon-container">
-        <img src="assets/cellphone.png" class="tel-icon">
-    </div>
-
-    <div class="input-container-password">
-        <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Senha" [(ngModel)]="password" #passwordInput class="password-input">
-        <button class="toggle-password" (click)="togglePasswordVisibility()">
-            <img src="{{ showPassword ? 'assets/eye.png' : 'assets/eye2.png' }}">
-        </button>
-
-        <div class="icon-password">
-            <img src="assets/senha.png">
+        <div class="line-title"></div>
+    
+        <div class="logo-container">
+            <img src="assets/logo.png" class="logo">
         </div>
-    </div>
+    
+        <div class="input-container">
 
-    <div class="input-container-password">
-        <input type="{{ showConfirmPassword ? 'text' : 'password' }}" placeholder="Confirmar senha" [(ngModel)]="confirmPassword" #confirmPasswordInput class="password-input">
-        <button class="toggle-password" (click)="toggleConfirmPasswordVisibility()">
-            <img src="{{ showConfirmPassword ? 'assets/eye.png' : 'assets/eye2.png' }}">
-        </button>
+            <input type="text" placeholder="Nome" class="name-input">
+            <div class="name-icon-container">
+                <img src="assets/user.png" class="name-icon">
+            </div>
 
-        <div class="icon-password">
-            <img src="assets/senha.png">
+            <input type="email" placeholder="Email" class="email-input">
+            <div class="email-icon-container">
+                <img src="assets/email.png" class="email-icon">
+            </div>
+            
+            <input type="tel" placeholder="Celular" [(ngModel)]="telefone" (input)="formatarNumeroCelular()" pattern="[0-9]*" class="tel-input" maxlength="15">
+            <div class="tel-icon-container">
+                <img src="assets/cellphone.png" class="tel-icon">
+            </div>
+        
+            <div class="input-container-password">
+                <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Senha" [(ngModel)]="password" #passwordInput class="password-input" maxlength="23">
+                <button class="toggle-password" (click)="togglePasswordVisibility()">
+                    <img src="{{ showPassword ? 'assets/eye.png' : 'assets/eye2.png' }}">
+                </button>
+        
+                <div class="icon-password">
+                    <img src="assets/password.png">
+                </div>
+            </div>
+        
+            <div class="input-container-password">
+                <input type="{{ showConfirmPassword ? 'text' : 'password' }}" placeholder="Confirmar senha" [(ngModel)]="confirmPassword" #confirmPasswordInput class="password-input" maxlength="23">
+                <button class="toggle-password" (click)="toggleConfirmPasswordVisibility()">
+                    <img src="{{ showConfirmPassword ? 'assets/eye.png' : 'assets/eye2.png' }}">
+                </button>
+        
+                <div class="icon-password">
+                    <img src="assets/password.png">
+                </div>
+            </div>
+        
+            <button class="create-account">
+                Criar conta
+            </button>
+        
+            <h5>Já tem uma conta? <a href="/login"><span>Login</span></a></h5>
         </div>
-    </div>
-
-    <button class="create-account">
-        Criar conta
-    </button>
-
-    <h5>Já tem uma conta? <a href="/login"><span>Login</span></a></h5>
-    <h4>Crie uma conta para poder fazer compras <br>na nossa loja :)</h4>
-</div>
+    </main>
+    
+    <footer>
+        <h4>Crie uma conta para poder fazer compras <br>na nossa loja :)</h4>
+    </footer>
+</body>

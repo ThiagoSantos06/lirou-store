@@ -2,11 +2,48 @@
     font-family: 'Inter', sans-serif;
 }
 
+body {
+    height: 100vh;
+}
+
+.voltar-button {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+.voltar-button button {
+    background-color: #0166FF;
+    border: none;
+    font-size: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    color: white;
+}
+
+.voltar-img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.formulario-cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 0.5rem;
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     color: #0066FF;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    height: 6.5rem;
 }
 
 .line-title {
@@ -17,17 +54,27 @@ h1 {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    margin-bottom: 6rem;
+    margin-bottom: 1.5rem;
 }
 
 input {
     margin-bottom: 1rem;
     width: 15rem;
     height: 2rem;
-    border-radius: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
     padding: 5px 15px;
     border-color: black;
     outline: none;
+    transition: 0.5s;
+}
+
+input:focus {
+    border-color: #0166FF;
+}
+
+input:hover {
+    border-color: #0166FF;
 }
 
 input::placeholder {
@@ -55,11 +102,11 @@ input::placeholder {
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
-.create-account:hover {
-    background-color: rgb(29, 29, 29);
+.create-account:active {
+    background-color: #063f96;
 }
 
 h5 {
@@ -72,12 +119,6 @@ h5 a {
 
 h5 span {
     color: #0066FF;
-}
-
-h4 {
-    text-align: center;
-    position: fixed;
-    bottom: 0.8rem;
 }
 
 .input-container-password {
@@ -107,23 +148,36 @@ h4 {
 .email-icon {
     position: absolute;
     right: 6rem;
-    transform: translateY(-210%);
-    width: 1.5rem;
+    transform: translateY(-315%);
+    width: 1.4rem;
     height: auto;
 }
 
-/* Posicionar textos do input */
-
-.email-input, .tel-input, .password-input {
+.name-icon-container {
     position: relative;
 }
 
-.email-input::placeholder, .tel-input::placeholder, .password-input::placeholder {
+.name-icon {
+    position: absolute;
+    right: 6rem;
+    transform: translateY(-235%);
+    width: 1.2rem;
+    height: auto;
+}
+
+
+/* Posicionar textos do input */
+
+.email-input, .tel-input, .password-input, .name-input {
+    position: relative;
+}
+
+.email-input::placeholder, .tel-input::placeholder, .password-input::placeholder, .name-input::placeholder {
     position: absolute;
     left: 1rem;
 }
 
-.email-input, .tel-input, .password-input {
+.email-input, .tel-input, .password-input, .name-input {
     text-indent: 2.5rem;
 }
 
@@ -135,9 +189,9 @@ h4 {
 
 .tel-icon {
     position: absolute;
-    right: 6rem;
-    transform: translateY(-235%);
-    width: 1.2rem;
+    right: 5.3rem;
+    transform: translateY(-130%);
+    width: 3rem;
     height: auto;
 }
 
@@ -149,13 +203,67 @@ h4 {
 }
 
 .icon-password img {
-    width: 1.5rem;
+    width: 1rem;
     height: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* Celular */
 @media screen and (max-width: 599px) {
     h4 {
         font-size: 0.8rem;
+    }
+
+    h1 {
+        margin-top: 1.5rem;
+    }
+
+    .line-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .create-account {
+        cursor: none;
+    }
+
+    .toggle-password {
+        cursor: none;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        height: 5rem;
+    }
+
+    footer h4 {
+        font-size: 0.7rem;
+    }
+
+    .voltar-button {
+        position: absolute;
+        top: 30px;
+        left: 25px;
+    }
+    
+    .voltar-button button {
+        background-color: #0166FF;
+        border: none;
+        font-size: 20px;
+        border-radius: 100%;
+        cursor: pointer;
+        color: white;
+    }
+    
+    .voltar-img {
+        width: 2rem;
+        height: 2rem;
     }
 }
