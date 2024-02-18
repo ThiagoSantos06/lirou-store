@@ -10,17 +10,15 @@
             <option value="opcao3">Cajueiro Seco - R$ 30,00</option>
             <option value="opcao4">Jardim Piedade - R$ 40,00</option>
             <option value="opcao5">Piedade - R$ 50,00</option>
-            <option value="nenhum">Nenhum</option>
+            <option value="outro">Outro</option>
         </select>
     </div>
             
-    <div *ngIf="opcaoSelecionada === 'nenhum'">
+    <div *ngIf="opcaoSelecionada === 'outro'">
         <p class="texto1">Calcule seu CEP</p>
-        <div class="frete-div">
-            <input [(ngModel)]="inputUsuario" type="text" placeholder="Digite seu CEP" maxlength="9" id="cepInput" (input)="formatarCEP($event)">
-            <button (click)="calcularOFrete()">Calcular</button>
-        </div>
+        <input [(ngModel)]="inputUsuario" type="text" placeholder="Digite seu CEP" maxlength="9" id="cepInput" (input)="formatarCEP($event)">
         <p><a href="">Não sei meu CEP</a></p>
+        <button (click)="calcularOFrete()">Calcular</button>
     </div>
 
     <div class="container-frete">
