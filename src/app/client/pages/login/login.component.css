@@ -5,32 +5,69 @@
 h1 {
     text-align: center;
     margin-bottom: 0.5rem;
-    margin-top: 6.5rem;
+    margin-top: 3rem;
+    color: #0066FF;
 }
 
 .line-title {
     width: 8rem;
     height: 0.3rem;
-    background-color: black;
+    background-color: #0066FF;;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
+}
+
+.voltar-button {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+.voltar-button button {
+    background-color: #0166FF;
+    border: none;
+    font-size: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    color: white;
+}
+
+.voltar-img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    height: 6.5rem;
 }
 
 input {
     margin-bottom: 1rem;
     width: 15rem;
     height: 2rem;
-    border-radius: 0.2rem;
+    border-radius: 5px;
     padding: 5px 15px;
-    border-color: black;
+    border: solid 2px black;
     outline: none;
+    transition: 0.5s;
 }
 
 input::placeholder {
     color: #282828;
+}
+
+input:focus {
+    border-color: #0166FF;
+}
+
+input:hover {
+    border-color: #0166FF;
 }
 
 .input-container {
@@ -45,24 +82,25 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
     width: 17rem;
     height: 3rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: black;
+    background-color: #0066FF;;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
-.create-account:hover {
-    background-color: rgb(29, 29, 29);
+.create-account:active {
+    background-color: #063f96;
 }
 
 h5 {
-    margin-top: 0.7rem;
+    margin-top: 0.3rem;
 }
 
 h5 a {
@@ -106,8 +144,8 @@ h5 span {
 .email-icon {
     position: absolute;
     right: 6rem;
-    transform: translateY(-210%);
-    width: 1.5rem;
+    transform: translateY(-310%);
+    width: 1.4rem;
     height: auto;
 }
 
@@ -131,12 +169,12 @@ h5 span {
 .icon-password {
     position: absolute;
     top: 40%;
-    left: 1.2rem;
+    left: 1.4rem;
     transform: translateY(-50%);
 }
 
 .icon-password img {
-    width: 1.5rem;
+    width: 1rem;
     height: auto;
 }
 
@@ -144,5 +182,29 @@ h5 span {
 @media screen and (max-width: 599px) {
     h4 {
         font-size: 0.8rem;
+    }
+
+    .create-account, .toggle-password {
+        cursor: none;
+    }
+
+    .voltar-button {
+        position: absolute;
+        top: 30px;
+        left: 25px;
+    }
+    
+    .voltar-button button {
+        background-color: #0166FF;
+        border: none;
+        font-size: 20px;
+        border-radius: 100%;
+        cursor: pointer;
+        color: white;
+    }
+    
+    .voltar-img {
+        width: 2rem;
+        height: 2rem;
     }
 }
