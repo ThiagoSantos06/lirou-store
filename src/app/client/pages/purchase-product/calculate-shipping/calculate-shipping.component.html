@@ -15,8 +15,11 @@
     </div>
             
     <div *ngIf="opcaoSelecionada === 'outro'">
-        <p class="texto1">Calcule seu CEP</p>
-        <input [(ngModel)]="inputUsuario" type="text" placeholder="Digite seu CEP" maxlength="9" id="cepInput" (input)="formatarCEP($event)">
+        <div class="texto1">
+            <p>Calcule seu CEP</p>
+            <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+        </div>
+        <input [(ngModel)]="inputUsuario" type="text" placeholder="Digite seu CEP" maxlength="9" id="cepInput" (input)="formatarCEP($event)" [ngStyle]="{'border-color': inputError ? 'red' : 'initial'}">
         <p><a href="">Não sei meu CEP</a></p>
         <button (click)="calcularOFrete()">Calcular</button>
     </div>
@@ -28,6 +31,7 @@
                     <input type="radio" name="freteSelecionado" [value]="frete">
                     <span class="frete-details">
                         <span class="frete-name">{{frete.name}}</span>
+                        <span class="frete-name">{{frete.delivery_time}}</span>
                         <span class="frete-price">R$ {{frete.price}}</span>
                     </span>
                 </label>

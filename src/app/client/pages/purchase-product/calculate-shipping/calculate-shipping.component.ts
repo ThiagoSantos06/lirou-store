@@ -11,6 +11,8 @@ export class CalculateShippingComponent {
   valoresDosFretes: ShippingDTO[] = []
   inputUsuario: string = ''
   opcaoSelecionada: string = 'opcao1';
+  errorMessage: string = '';
+  inputError: boolean = false;
 
   constructor(private shppingServie: ShippingService) {}
 
@@ -20,11 +22,45 @@ export class CalculateShippingComponent {
     })
   }
 
-  calcularOFrete() {
-    this.shppingServie.calculateShipping(this.inputUsuario).subscribe((listaDeFretes: ShippingDTO[]) => {
-      this.valoresDosFretes = listaDeFretes
-    })
+  private handleError(message: string) {
+    this.errorMessage = message;
+    this.valoresDosFretes = []; // Limpa as opções de frete
+    setTimeout(() => {
+      this.inputError = true; // Marca o input como em estado de erro
+    }, 1); // Atraso
+ }
+
+ calcularOFrete() {
+  // Remover o hífen do CEP para a verificação de comprimento
+  const cepSemHifen = this.inputUsuario.replace('-', '');
+
+  // Verifica se o campo de CEP está vazio
+  if (this.inputUsuario.trim() === '') {
+      this.handleError('Preencha esse dado.');
+      return; // Interrompe a execução do método
   }
+
+  // Verifica se o CEP tem menos de 8 dígitos
+  if (cepSemHifen.length < 8) {
+      this.handleError('Digite um CEP de 8 dígitos.');
+      return; // Interrompe a execução do método
+  }
+
+  this.errorMessage = ''; // Limpar mensagem de erro anterior
+  this.inputError = false; // Resetar o estado de erro do input
+  this.shppingServie.calculateShipping(this.inputUsuario).subscribe({
+      next: (listaDeFretes: ShippingDTO[]) => {
+          if(listaDeFretes.length > 0) {
+              this.valoresDosFretes = listaDeFretes;
+          } else {
+              this.handleError('CEP inválido ou não encontrado.');
+          }
+      },
+      error: (err) => {
+          this.handleError('Digite um CEP válido.');
+      }
+  });
+}
 
   formatarCEP(event: any) {
     let cep = event.target.value;

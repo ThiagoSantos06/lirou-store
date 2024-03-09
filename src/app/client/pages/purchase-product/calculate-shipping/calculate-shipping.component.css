@@ -68,8 +68,20 @@ h1 {
     font-weight: bold;
     color: #545454;
     margin-top: 1.5rem;
+    
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+}
+
+.error-message {
+    color: red;
+}
+
+.input-error {
+    border-color: red; /* Altera a cor da borda do input para vermelho */
+}
+
+.error-message-error {
+    color: red; /* Altera a cor do texto da mensagem de erro para vermelho */
 }
 
 /* FRETE */
