@@ -2,18 +2,19 @@
 
 <section class="container-produto">
     <div class="container-itens">
-        <img src="{{glasses.pic}}">
-        <div class="container-info">
-            <h1>{{glasses.title}}</h1>
-            <h2>R$ {{glasses.price}},00</h2>
-            <div class="container-quantidade">
-                <h3 class="quantidade-mais">-</h3>
-                <h3>{{glasses.quantityInStock}}</h3>
-                <h3 class="quantidade-menos">+</h3>
-            </div>
+      <img src="{{glasses.pic}}">
+      <div class="container-info">
+        <h1>{{glasses.title}}</h1>
+        <h2>R$ {{glasses.price}},00</h2>
+        <div class="container-quantidade">
+          <h3 class="quantidade-menos" (click)="decreaseQuantity()">-</h3>
+          <h3>{{glasses.quantityInStock}}</h3>
+          <h3 class="quantidade-mais" (click)="increaseQuantity()">+</h3>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+  
 
 <div class="botoes">
     <button class="botao-comprar">Comprar</button>
