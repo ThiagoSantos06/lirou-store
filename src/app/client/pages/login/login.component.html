@@ -2,33 +2,43 @@
 
 <h1>Login</h1>
 
+<div class="voltar-button">
+    <a routerLink="/">
+        <img src="assets/voltar.png" class="voltar-img"> 
+    </a>
+</div>
+
 <div class="line-title"></div>
+
+<div class="logo-container">
+    <img src="assets/logo.png" class="logo">
+</div>
 
 <div class="input-container">
     <input type="email" placeholder="Email" class="email-input">
     <div class="email-icon-container">
-        <img src="assets/email-and-mail-icon-black-free-png 5.png" class="email-icon">
+        <img src="assets/email.png" class="email-icon">
     </div>
 
     <div class="input-container-password">
-        <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Senha" [(ngModel)]="password" #passwordInput class="password-input">
+        <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Senha" [(ngModel)]="password" #passwordInput class="password-input" maxlength="23">
         <button class="toggle-password" (click)="togglePasswordVisibility()">
             <img src="{{ showPassword ? 'assets/eye.png' : 'assets/eye2.png' }}">
         </button>
 
         <div class="icon-password">
-            <img src="assets/senha.png">
+            <img src="assets/password.png">
         </div>
     </div>
 
     <div class="input-container-password">
-        <input type="{{ showConfirmPassword ? 'text' : 'password' }}" placeholder="Confirmar senha" [(ngModel)]="confirmPassword" #confirmPasswordInput class="password-input">
+        <input type="{{ showConfirmPassword ? 'text' : 'password' }}" placeholder="Confirmar senha" [(ngModel)]="confirmPassword" #confirmPasswordInput class="password-input" maxlength="23">
         <button class="toggle-password" (click)="toggleConfirmPasswordVisibility()">
             <img src="{{ showConfirmPassword ? 'assets/eye.png' : 'assets/eye2.png' }}">
         </button>
 
         <div class="icon-password">
-            <img src="assets/senha.png">
+            <img src="assets/password.png">
         </div>
     </div>
 

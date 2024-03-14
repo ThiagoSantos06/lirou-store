@@ -10,17 +10,18 @@
             <option value="opcao3">Cajueiro Seco - R$ 30,00</option>
             <option value="opcao4">Jardim Piedade - R$ 40,00</option>
             <option value="opcao5">Piedade - R$ 50,00</option>
-            <option value="nenhum">Nenhum</option>
+            <option value="outro">Outro</option>
         </select>
     </div>
             
-    <div *ngIf="opcaoSelecionada === 'nenhum'">
-        <p class="texto1">Calcule seu CEP</p>
-        <div class="frete-div">
-            <input [(ngModel)]="inputUsuario" type="text" placeholder="Digite seu CEP" maxlength="9" id="cepInput" (input)="formatarCEP($event)">
-            <button (click)="calcularOFrete()">Calcular</button>
+    <div *ngIf="opcaoSelecionada === 'outro'">
+        <div class="texto1">
+            <p>Calcule seu CEP</p>
+            <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
         </div>
+        <input [(ngModel)]="inputUsuario" type="text" placeholder="Digite seu CEP" maxlength="9" id="cepInput" (input)="formatarCEP($event)" [ngStyle]="{'border-color': inputError ? 'red' : 'initial'}">
         <p><a href="">Não sei meu CEP</a></p>
+        <button (click)="calcularOFrete()">Calcular</button>
     </div>
 
     <div class="container-frete">
@@ -30,6 +31,7 @@
                     <input type="radio" name="freteSelecionado" [value]="frete">
                     <span class="frete-details">
                         <span class="frete-name">{{frete.name}}</span>
+                        <span class="frete-name">{{frete.delivery_time}} dias</span>
                         <span class="frete-price">R$ {{frete.price}}</span>
                     </span>
                 </label>
