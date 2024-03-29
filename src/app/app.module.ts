@@ -19,7 +19,6 @@ import { ProductService } from './client/services/ProductService';
 import { PurchaseProductComponent } from './client/pages/purchase-product/purchase-product.component';
 import { CalculateShippingComponent } from './client/pages/purchase-product/calculate-shipping/calculate-shipping.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CarouselComponent } from './client/pages/home/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { CarouselComponent } from './client/pages/home/carousel/carousel.compone
     DetalhesDosProdutosComponent,
     PurchaseProductComponent,
     CalculateShippingComponent,
-    CarouselComponent
   ],
   imports: [
     BrowserModule,
