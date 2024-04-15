@@ -18,6 +18,7 @@ import { DetalhesDosProdutosComponent } from './client/pages/purchase-product/de
 import { ProductService } from './client/services/ProductService';
 import { PurchaseProductComponent } from './client/pages/purchase-product/purchase-product.component';
 import { CalculateShippingComponent } from './client/pages/purchase-product/calculate-shipping/calculate-shipping.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CalculateShippingComponent } from './client/pages/purchase-product/calc
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

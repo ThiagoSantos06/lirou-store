@@ -1,26 +1,33 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
+  animations: [
+    trigger('menuAnimation', [
+      state('open', style({
+        opacity: 1,
+        transform: 'translateX(0)'
+      })),
+      state('closed', style({
+        opacity: 1,
+        transform: 'translateX(-100%)'
+      })),
+      transition('open <=> closed', [
+        animate('0.5s')
+      ])
+    ])
+ ]
 })
 
 export class Header {
-  showDiv: boolean = false;
+  menuState: string = 'closed';
 
-  toggleDiv() {
-    this.showDiv = !this.showDiv;
-  }
-
-  @HostListener('document:click', ['$event'])
-  clickOutside(event: Event) {
-    const target = event.target as HTMLElement;
-    const isMenuButton = target.classList.contains('menu');
-    const isOverlay = target.closest('.overlay');
-
-    if (!isMenuButton && !isOverlay) {
-      this.showDiv = false;
-    }
+  toggleMenu() {
+    this.menuState = this.menuState === 'open' ? 'closed' : 'open';
+    // Define a propriedade overflow do body com base no estado do menu
+    document.body.style.overflow = this.menuState === 'open' ? 'hidden' : '';
   }
 }

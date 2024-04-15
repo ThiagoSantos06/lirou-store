@@ -1,47 +1,59 @@
-<header>
-  <img src="assets/Design_sem_nome__9_-removebg-preview 6.png" class="menu" (click)="toggleDiv()">
+<main>
+  <header>
+    <section class="menu-container">
+      <div class="menu">
+        <button class="menu-button" (click)="toggleMenu()">
+            <img src="assets/menu.png" class="menu-icon">
+        </button>
+      </div>
+      
+      <div class="menu-father" *ngIf="menuState" [@menuAnimation]="menuState">
+          <div class="fechar">
+              <img src="assets/fechar.png" (click)="toggleMenu()">
+          </div>
+      
+          <div class="lista">
+              <div class="div-lista"><a href="" class="title-lista">ACESSÓRIOS</a></div><hr>
+              <div class="div-lista"><a href="" class="title-lista">LUPAS</a></div><hr>
+              <div class="div-lista"><a href="" class="title-lista">DESTAQUES</a></div><hr>
+              <div class="div-lista"><a href="" class="title-lista">ACESSÓRIOS</a></div><hr>
+              <div class="div-lista"><a href="" class="title-lista">PRODUTOS</a></div><hr>
+              <div class="div-lista"><a href="" class="title-lista">RASTREAR</a></div>
+          </div>
+      </div>
+    </section>
 
-  <nav>
-    <a routerLink="/">
-      <img src="assets/Imagem_do_WhatsApp_de_2023-12-15_à_s__21.21 3.png"> 
-    </a>
-  </nav>
+    <a href="#"><img src="assets/New logo.png" class="logo"></a>
 
-  <nav>
-    <a routerLink="/cart">
-      <img src="assets/Design_sem_nome__2_-removebg-preview 1.png"> 
-    </a>
-  </nav>
+    <div class="input-container">
+      <input type="text" placeholder="Pesquisar">
+      <button>
+          <img src="assets/Lupa.png" class="lupa">
+      </button>
+    </div>
 
-</header>
+    <div class="icons">
+      <div class="registrar">
+        <a href="#"><img src="assets/user_login.png" class="icon-user"></a>
+        <div class="icons-container">
+          <div class="title-login"><strong>Olá! <a href="/login">Faça login</a></strong></div>
+          <div class="title-register"><a href="/register">ou cadastre-se</a></div>
+        </div>
+      </div>
 
-<div *ngIf="showDiv" class="overlay">
-  <div class="menu-title">Menu</div>
-  <div class="menu-content">
-    <h1>Links de contato:</h1>
-    <ul>
-      <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-      <li><a href="https://web.whatsapp.com" target="_blank">Whatsapp</a></li>
-      <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCDlLFwnVmtKNkGLklmRxmbklkMQJZtqXztfGJsvKcDbTPNLlTGvZzhQsVpMhnRzsXtlzL" target="_blank">G-mail</a></li>
-    </ul>
-  </div>
+      <div class="cart">
+        <a href="/cart"><img src="assets/cart.png" class="cart-icon"></a>
+      </div>
+    </div>
+  </header>
 
-  <div class="menu-content">
-    <h1>Serviços:</h1>
-    <ul>
-      <li>Entrega Rápida</li>
-      <li>Garantia do Produto</li>
-      <li>Atendimento ao Cliente</li>
-    </ul>
-  </div>
-
-  <div class="menu-divider"></div> <!-- Linha fininha -->
-
-  <div class="terms-of-use">
-    <a href="url_do_seu_termo_de_uso" class="ajuste-celular">Termos de Uso</a>
-  </div>
-
-  <div class="privacy-policy">
-    <a href="url_da_sua_politica_de_privacidade" class="ajuste-celular">Política de Privacidade</a>
-  </div>
-</div>
+  <ul class="navigation">
+    <li><a href="#">CATEGORIAS</a></li>
+    <li><a href="#">LUPAS</a></li>
+    <li><a href="#">DESTAQUES</a></li>
+    <li><a href="#">ACESSÓRIOS</a></li>
+    <li><a href="#">PRODUTOS</a></li>
+    <li><a href="#">RASTREAR</a></li>
+  </ul>
+  <hr>
+</main>
