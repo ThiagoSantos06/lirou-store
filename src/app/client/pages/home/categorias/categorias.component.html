@@ -1,15 +1,17 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/inter@3.15.0/dist/inter.css">
 <h1>Categorias</h1>
 
-<section class="outer-container">
-    <button *ngIf="isScrolledLeft" (click)="scrollHorizontally(-170)" class="botao-scroll-esquerda"><</button>
+
+    <section class="outer-container">
+        <button *ngIf="isScrolledLeft" (click)="scrollHorizontally(-170)" class="botao-scroll-esquerda"><</button>
+        
+        <section class="container-categorias">
+            <div *ngFor="let item of listaDeOculosDaAPI"> 
+                <img src="{{item.pic}}" alt="" >
+                <h2>{{item.title}}</h2>
+            </div>
+        </section>
     
-    <section class="container-categorias">
-        <div *ngFor="let item of listaDeOculosDaAPI"> 
-            <img src="{{item.pic}}" alt="" >
-            <h2>{{item.title}}</h2>
-        </div>
+        <button *ngIf="isScrolledRight" (click)="scrollHorizontally(170)" class="botao-scroll">></button>
     </section>
 
-    <button *ngIf="isScrolledRight" (click)="scrollHorizontally(170)" class="botao-scroll">></button>
-</section>
